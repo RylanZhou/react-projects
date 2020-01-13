@@ -232,7 +232,6 @@ module.exports = {
       }
     ],
     'space-before-blocks': [2, 'always'],
-    'space-before-function-paren': [2, 'never'],
     'space-in-parens': [2, 'never'],
     'space-infix-ops': 2,
     'space-unary-ops': [
@@ -272,6 +271,7 @@ module.exports = {
         objectsInObjects: false
       }
     ],
-    'array-bracket-spacing': [2, 'never']
+    'array-bracket-spacing': [2, 'never'],
+
   }
 }
