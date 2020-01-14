@@ -12,7 +12,7 @@ class Quiz extends Component {
   state = {
     questions: [],
     score: 0,
-    responses: 5
+    responses: 0
   }
 
   componentDidMount() {

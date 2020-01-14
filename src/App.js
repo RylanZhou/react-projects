@@ -1,9 +1,23 @@
 import React from 'react'
-import Quiz from './Quiz App/index'
+import { BrowserRouter as Router } from 'react-router-dom'
+
+// import Quiz from './Quiz Page/index'
+import BeachResort from './Beach Resort Page/index'
+import { RoomProvider } from './Beach Resort Page/Context'
+
+// function App() {
+//   return (
+//     <Quiz />
+//   )
+// }
 
 function App() {
   return (
-    <Quiz />
+    <RoomProvider value="hello">
+      <Router>
+        <BeachResort />
+      </Router>
+    </RoomProvider>
   )
 }
 
