@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway");
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 * {
   margin: 0;
@@ -159,7 +159,7 @@ h6 {
       height: auto;
       display: flex;
       margin-left: 4rem;
-  
+
       a {
         margin: 0 1rem;
         padding: 0.5rem 0;
@@ -173,13 +173,13 @@ h6 {
 .default-hero,
 .rooms-hero {
   min-height: calc(100vh - 66px);
-  background: url("./images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url('./images/defaultBcg.jpeg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .rooms-hero {
-  background-image: url("./images/room-2.jpeg");
+  background-image: url('./images/room-2.jpeg');
   min-height: 60vh;
 }
 /* End of Hero */
@@ -331,123 +331,144 @@ h6 {
 .room {
   box-shadow: var(--lightShadow);
   transition: var(--mainTransition);
-}
-.room:hover {
-  box-shadow: var(--darkShadow);
-}
 
-.img-container {
-  position: relative;
-}
-.img-container img {
-  width: 100%;
-  display: block;
-  transition: var(--mainTransition);
-}
-.price-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  color: var(--mainWhite);
-  padding: 0.3rem 0.6rem 0.5rem;
-  border-bottom-right-radius: 1rem;
-  font-size: 0.5rem;
-  text-align: center;
-  transition: var(--mainTransition);
-}
-.price-top h6 {
-  margin-bottom: 0;
-  font-size: 0.9rem;
-  font-weight: 300;
-  letter-spacing: var(--mainSpacing);
-}
-.room-link {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: scale(0);
-  transition: all 0.3s linear;
-}
-.img-container:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
-.img-container:hover img {
-  opacity: 0.3;
-}
-.img-container:hover .price-top {
-  opacity: 0;
-}
-.img-container:hover .room-link {
-  transform: translate(-50%, -50%) scale(1);
-}
-.room-info {
-  background: var(--darkGrey);
-  text-transform: capitalize;
-  padding: 0.5rem 0;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: var(--mainSpacing);
+  &:hover {
+    box-shadow: var(--darkShadow);
+  }
+
+  .img-container {
+    position: relative;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+
+      img {
+        opacity: 0.3;
+      }
+
+      .price-top {
+        opacity: 0;
+      }
+
+      .room-link {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    img {
+      width: 100%;
+      display: block;
+      transition: var(--mainTransition);
+    }
+
+    .price-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--mainWhite);
+      padding: 0.3rem 0.6rem 0.5rem;
+      border-bottom-right-radius: 1rem;
+      font-size: 0.5rem;
+      text-align: center;
+      transition: var(--mainTransition);
+
+      h6 {
+        margin-bottom: 0;
+        font-size: 0.9rem;
+        font-weight: 300;
+        letter-spacing: var(--mainSpacing);
+      }
+    }
+
+    .room-link {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: scale(0);
+      transition: all 0.3s linear;
+    }
+  }
+
+  .room-info {
+    background: var(--darkGrey);
+    text-transform: capitalize;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: var(--mainSpacing);
+  }
 }
 /* end of room  */
-/* single room*/
 
+/* single room*/
 .single-room {
   padding: 5rem 0 0 0;
-}
-.single-room-images {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 50px;
-}
-.single-room-images img {
-  width: 100%;
-  display: block;
-}
-.single-room-info {
-  width: 80vw;
-  display: grid;
-  grid-template-columns: 1fr;
-  margin: 2rem auto;
-}
-.desc,
-.info {
-  margin: 1rem 0;
-}
-.desc h3 {
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
-}
-.desc p {
-  line-height: 1.5;
-}
-.info h3,
-.info h6 {
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+
+  .single-room-images {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 50px;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .single-room-info {
+    width: 80vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2rem auto;
+
+    .desc {
+      margin: 1rem 0;
+
+      h3 {
+        text-transform: capitalize;
+        letter-spacing: var(--mainSpacing);
+      }
+
+      p {
+        line-height: 1.5;
+      }
+    }
+
+    .info {
+      margin: 1rem 0;
+
+      h3,
+      h6 {
+        text-transform: capitalize;
+        letter-spacing: var(--mainSpacing);
+      }
+
+      h6 {
+        font-weight: 300;
+      }
+    }
+  }
 }
 
-.info h6 {
-  font-weight: 300;
-}
 .room-extras {
-  width: 80vw;
-  margin: 0 auto 3rem auto;
+  h6 {
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+  }
+
+  .extras {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem;
+  }
 }
-.room-extras h6 {
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
-}
-.extras {
-  list-style-type: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  grid-column-gap: 2rem;
-  grid-row-gap: 1rem;
-}
+
 @media screen and (min-width: 992px) {
   .single-room-images,
   .single-room-info,
@@ -465,71 +486,84 @@ h6 {
   }
 }
 /* end of single room*/
+
 /* roomlist */
-.roomslist {
+.rooms-list {
   padding: 5rem 0;
-}
-.roomslist-center {
-  width: 80vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 30px;
+
+  .rooms-list-center {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 30px;
+  }
 }
 
 @media screen and (min-width: 776px) {
-  .roomslist-center {
+  .rooms-list-center {
     width: 90vw;
   }
 }
 @media screen and (min-width: 992px) {
-  .roomslist-center {
+  .rooms-list-center {
     width: 95vw;
     max-width: 1170px;
   }
 }
 /* end of roomlist */
-/*  rooms fitler*/
+
+/*  rooms filter*/
 .filter-container {
   padding: 5rem 0;
+
+  .filter-form {
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+    grid-row-gap: 2rem;
+    grid-column-gap: 40px;
+
+    .form-group {
+      text-transform: capitalize;
+
+      label {
+        display: block;
+        letter-spacing: var(--mainSpacing);
+        margin-bottom: 0.5rem;
+      }
+
+      .form-control {
+        width: 100%;
+        background: transparent;
+        font-size: 1rem;
+      }
+
+      .size-inputs {
+        display: flex;
+
+        .size-input {
+          width: 40%;
+          padding: 0.2rem;
+          border: 1px solid var(--mainBlack);
+          border-radius: 0.3rem;
+          margin-right: 0.3rem;
+        }
+      }
+
+      .single-extra {
+        label {
+          display: inline-block;
+          font-size: 0.8rem;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
 }
-.filter-form {
-  width: 60vw;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
-  grid-row-gap: 2rem;
-  grid-column-gap: 40px;
-}
-.form-group {
-  text-transform: capitalize;
-}
-.form-group label {
-  display: block;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 0.5rem;
-}
-.form-control {
-  width: 100%;
-  background: transparent;
-  font-size: 1rem;
-}
-.size-inputs {
-  display: flex;
-}
-.size-input {
-  width: 40%;
-  padding: 0.2rem;
-  border: 1px solid var(--mainBlack);
-  border-radius: 0.3rem;
-  margin-right: 0.3rem;
-}
-.single-extra label {
-  display: inline-block;
-  font-size: 0.8rem;
-  margin-left: 0.5rem;
-}
+
 @media screen and (min-width: 776px) {
   .filter-form {
     width: 70vw;
