@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.login-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .half {
+    height: 50%
+  }
+
+  .upper {
+    background-color: #3498db;
+  }
+
+  .login-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    padding: 24px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .1);
+
+    h4 {
+      margin: 24px 0;
+      font-size: 24px;
+    }
+
+    button {
+      display: block;
+      width: 80%;
+      height: 40px;
+      margin: 16px auto;
+      border: none;
+      border-radius: 12px;
+      outline: none;
+      font-size: 18px;
+      background-color: #3498db;
+      color: white;
+    }
+  }
+}
+
+.page-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 6fr 1fr;
+
+  .room-list {
+    background-color: #3498db;
+  }
+
+  .message-list {
+    padding: 20px;
+    
+    .message {
+      margin-bottom: 10px;
+
+      .sender {
+        margin-bottom: 2px;
+        font-size: 12px;
+      }
+
+      .text {
+        display: inline-block;
+        padding: 6px;
+        border-radius: 8px;
+        color: white;
+        background-color: #3498db;
+      }
+    }
+  }
+}
