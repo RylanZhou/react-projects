@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.page-container {
+  padding: 20px;
+  
+  header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 6fr 1fr;
+    grid-template-areas: 'c m'
+                         'c e';
+    grid-gap: 10px;
+    padding: 20px;
+
+    .channel-list {
+      grid-area: c;
+    }
+
+    .message-list {
+      grid-area: m;
+    }
+
+    .editor {
+      grid-area: e;
+    }
+  }
+}
