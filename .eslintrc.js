@@ -20,16 +20,10 @@ module.exports = {
   plugins: ['react'],
   rules: {
     'react/jsx-max-props-per-line': [
-      2,
-      {
-        singleline: 10,
-        multiline: {
-          max: 1,
-          allowFirstLine: false
-        }
-      }
+      2, {'when': 'multiline'}
     ],
     'react/jsx-pascal-case': ['error'],
+    'react/jsx-closing-tag-location': 2,
     'accessor-pairs': 2,
     'arrow-spacing': [
       2,
