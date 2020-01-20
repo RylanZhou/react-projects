@@ -10,8 +10,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 20px 0;
   background-color: #ccc;
+
+  .title {
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
 
   .card {
     width: 70%;
