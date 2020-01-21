@@ -4,7 +4,13 @@ import PropTypes from 'prop-types'
 import { Button } from '@material-ui/core'
 import { FaPencilAlt, FaTrash } from 'react-icons/fa'
 
-export default function ExpenseItem({ id, charge, amount, handleDelete, handleEdit }) {
+export default function ExpenseItem({
+  id,
+  charge,
+  amount,
+  handleDelete,
+  handleEdit
+}) {
   return (
     <li className="expense-item">
       <span className="charge">{charge}</span>
@@ -12,7 +18,7 @@ export default function ExpenseItem({ id, charge, amount, handleDelete, handleEd
       <Button color="primary" onClick={() => handleEdit(id)}>
         <FaPencilAlt />
       </Button>
-      <Button color="secondary" onClick={() => handleDelete(id)} >
+      <Button color="secondary" onClick={() => handleDelete(id)}>
         <FaTrash />
       </Button>
     </li>

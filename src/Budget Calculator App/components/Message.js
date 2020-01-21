@@ -5,8 +5,8 @@ import { Snackbar } from '@material-ui/core'
 import { Alert } from '@material-ui/lab'
 
 const TYPE_TEXT = {
-  'error': 'Charge cannot be empty and amount has to be greater than zero.',
-  'success': 'Item added.'
+  error: 'Charge cannot be empty and amount has to be greater than zero.',
+  success: 'Item added.'
 }
 
 export default function Message({ type, show, handleClose }) {
@@ -15,11 +15,9 @@ export default function Message({ type, show, handleClose }) {
       open={show}
       anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
       autoHideDuration={3000}
-      onClose={handleClose}>
-      <Alert
-        severity={type}
-        variant="filled"
-        onClose={handleClose}>
+      onClose={handleClose}
+    >
+      <Alert severity={type} variant="filled" onClose={handleClose}>
         {TYPE_TEXT[type]}
       </Alert>
     </Snackbar>

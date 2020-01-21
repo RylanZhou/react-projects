@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import uuid from 'uuid/v4'
 
 import { Card } from '@material-ui/core'
@@ -6,9 +6,13 @@ import { Card } from '@material-ui/core'
 import ExpenseList from './components/ExpenseList'
 import ExpenseForm from './components/ExpenseForm'
 
-import mockExpensesData from './mock'
+// import mockExpensesData from './mock'
 
 import './style.scss'
+
+const initExpenses = localStorage.getItem('expenses')
+  ? JSON.parse(localStorage.getItem('expenses'))
+  : []
 
 function calculateTotal(expenses) {
   return expenses.reduce(
@@ -20,9 +24,21 @@ function calculateTotal(expenses) {
 export default function BudgetCalculator() {
   // React.useState(initState)
   // Returns an array containing two elements: [Origin, Update Function]
-  const [expenses, setExpenses] = useState(mockExpensesData)
-  const [pendingExpense, setPendingExpense] = useState({ id: '', charge: '', amount: '' })
+  const [expenses, setExpenses] = useState(initExpenses)
+  const [pendingExpense, setPendingExpense] = useState({
+    id: '',
+    charge: '',
+    amount: ''
+  })
   const [editMode, setEditMode] = useState(false)
+
+  // React.useEffect(callback, array)
+  // callback function is triggered each time when the component is rendered.
+  // array is to let react know when to re-render the component.
+  // [expenses] tells react to re-render the component when expenses change.
+  useEffect(() => {
+    localStorage.setItem('expenses', JSON.stringify(expenses))
+  }, [expenses])
 
   const handleSubmit = () => {
     if (!editMode) {
@@ -32,9 +48,13 @@ export default function BudgetCalculator() {
       }
       setExpenses([...expenses, singleExpense])
     } else {
-      // TODO
+      const resultExpenses = expenses.map(each =>
+        each.id === pendingExpense.id ? { ...each, ...pendingExpense } : each
+      )
+      setExpenses(resultExpenses)
     }
     setEditMode(false)
+    setPendingExpense({ id: '', charge: '', amount: '' })
   }
 
   const handleEdit = id => {
@@ -43,8 +63,8 @@ export default function BudgetCalculator() {
     setEditMode(true)
   }
 
-  const handleChange = (target) => {
-    setPendingExpense({ ...pendingExpense, [target.name]: target.value })
+  const handleChange = ({ name, value }) => {
+    setPendingExpense({ ...pendingExpense, [name]: value })
   }
 
   const handleClearAll = () => {

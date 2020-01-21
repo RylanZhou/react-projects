@@ -6,7 +6,12 @@ import { FaTrash } from 'react-icons/fa'
 
 import ExpenseItem from './ExpenseItem'
 
-export default function ExpenseList({ expenses, handleEdit, handleClearAll, handleDeleteSingle }) {
+export default function ExpenseList({
+  expenses,
+  handleEdit,
+  handleClearAll,
+  handleDeleteSingle
+}) {
   return (
     <div className="expense-list">
       <ul className="list">
@@ -15,7 +20,8 @@ export default function ExpenseList({ expenses, handleEdit, handleClearAll, hand
             key={each.id}
             {...each}
             handleDelete={handleDeleteSingle}
-            handleEdit={handleEdit} />
+            handleEdit={handleEdit}
+          />
         ))}
       </ul>
       {expenses.length && (
@@ -23,8 +29,10 @@ export default function ExpenseList({ expenses, handleEdit, handleClearAll, hand
           color="secondary"
           variant="contained"
           disableElevation
-          onClick={handleClearAll}>
-          Clear&nbsp;<FaTrash />
+          onClick={handleClearAll}
+        >
+          Clear&nbsp;
+          <FaTrash />
         </Button>
       )}
     </div>

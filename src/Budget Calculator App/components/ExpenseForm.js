@@ -9,10 +9,15 @@ import Message from './Message'
 const ERROR_TYPE = 'error'
 const SUCCESS_TYPE = 'success'
 
-export default function ExpenseForm({ expense, handleChange, editMode, handleSubmit }) {
+export default function ExpenseForm({
+  expense,
+  handleChange,
+  editMode,
+  handleSubmit
+}) {
   const [alert, setAlert] = useState({ show: false, text: ERROR_TYPE })
 
-  const checkSubmit = (e) => {
+  const checkSubmit = e => {
     e.preventDefault()
     if (!expense.charge || expense.amount <= 0) {
       setAlert({ show: true, type: ERROR_TYPE })
@@ -32,21 +37,24 @@ export default function ExpenseForm({ expense, handleChange, editMode, handleSub
         label="Charge"
         name="charge"
         value={expense.charge}
-        onChange={(e) => handleChange(e.target)}
-        placeholder="e.g. Rent" />
+        onChange={e => handleChange(e.target)}
+        placeholder="e.g. Rent"
+      />
       <TextField
         label="Amount"
         name="amount"
         type="number"
         value={expense.amount}
-        onChange={(e) => handleChange(e.target)}
-        placeholder="e.g. 100" />
+        onChange={e => handleChange(e.target)}
+        placeholder="e.g. 100"
+      />
       <Button
         color="primary"
         variant="contained"
         disableElevation
-        type="submit">
-        { editMode ? 'Save' : 'Add' } &nbsp;
+        type="submit"
+      >
+        {editMode ? 'Save' : 'Add'} &nbsp;
         <FaPaperPlane />
       </Button>
       <Message {...alert} handleClose={handleMessageClose} />
