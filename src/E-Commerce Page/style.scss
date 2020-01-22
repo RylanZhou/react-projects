@@ -63,12 +63,42 @@
       .product {
         margin: 24px;
 
+        &:hover {
+          .img-container {
+            img {
+              transform: scale(1.2);
+            }
+
+            .button {
+              transform: translate(0, 0);
+            }
+          }
+        }
+
         .img-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          border: 1px solid #eee;
+          border-radius: 4px;
+          min-height: 244px;
+          overflow: hidden;
+          text-align: center;
+
           img {
-            width: 100%;
+            width: 80%;
+            transition: all 2s;
           }
 
           .button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 6px 0 0 0;
+            transform: translate(100%, 100%);
+            transition: all 1s;
+
             svg {
               font-size: 24px;
             }
@@ -79,6 +109,7 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+          margin-top: 12px;
 
           .name {
             font-weight: bold;
@@ -93,6 +124,70 @@
             font-weight: bold;
             color: white;
             background-color: #27ae60;
+          }
+        }
+
+        .action {
+          a {
+            display: block;
+            font-size: 14px;
+            text-decoration: none;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+
+  .product-detail {
+    .title {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      padding: 0 30px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .left,
+      .right {
+        width: 50%;
+      }
+
+      .right {
+        padding: 20px 0;
+        align-self: center;
+        text-transform: capitalize;
+
+        h2 {
+          margin-bottom: 10px;
+        }
+
+        .price {
+          margin: 20px 0;
+          color: #27ae60;
+          font-size: 20px;
+        }
+
+        h5 {
+          font-size: 16px;
+        }
+
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #666;
+        }
+
+        .button-group {
+          margin-top: 24px;
+
+          button {
+            margin-right: 20px;
           }
         }
       }
