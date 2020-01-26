@@ -26,7 +26,10 @@ export default class Product extends Component {
                     className="button"
                     variant="contained"
                     color="primary"
-                    onClick={() => value.addToCart(id)}
+                    onClick={() => {
+                      value.addToCart(id)
+                      value.openItemDialog(id)
+                    }}
                   >
                     <MdAddShoppingCart />
                   </Button>

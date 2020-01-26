@@ -3,9 +3,10 @@ import { Switch, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Detail from './components/Detail'
-import Cart from './components/Cart'
+import Cart from './components/Cart/index'
 import NotFound404 from './components/404'
 import ProductList from './components/ProductList'
+import ItemDialog from './components/ItemDialog'
 
 import './style.scss'
 
@@ -19,6 +20,7 @@ export default function ECommerce() {
         <Route path="/cart" exact component={Cart} />
         <Route component={NotFound404} />
       </Switch>
+      <ItemDialog />
     </div>
   )
 }

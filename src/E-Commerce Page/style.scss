@@ -6,6 +6,10 @@
   font-family: 'Raleway', sans-serif !important;
 }
 
+a {
+  text-decoration: none;
+}
+
 .page-container {
   min-height: 100vh;
   background-color: #eee;
@@ -191,6 +195,90 @@
           }
         }
       }
+    }
+  }
+
+  .empty-cart {
+    text-align: center;
+
+    h1 {
+      margin: 24px 0;
+    }
+  }
+
+  .cart {
+    .title {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    th {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    td {
+      font-size: 16px;
+
+      .img {
+        width: 100px;
+      }
+
+      &.name,
+      &.price {
+        font-weight: bold;
+      }
+
+      .delete-btn {
+        color: #e74c3c;
+        font-size: 20px;
+      }
+    }
+
+    .cart-balance {
+      margin: 20px 20px 0 0;
+      text-align: right;
+
+      .balance {
+        margin-top: 20px;
+        line-height: 24px;
+        color: #666;
+        font-weight: normal;
+
+        strong {
+          display: inline-block;
+          min-width: 60px;
+        }
+      }
+    }
+  }
+
+  .default {
+    h1 {
+      margin: 24px 0;
+      text-align: center;
+
+      span {
+        color: #e74c3c;
+      }
+    }
+  }
+}
+
+.item-dialog {
+  text-align: center;
+
+  .dialog-container {
+    h3 {
+      margin: 10px 0;
+
+      &:first-of-type {
+        font-size: 24px;
+      }
+    }
+
+    .btn {
+      margin: 10px 0;
     }
   }
 }
