@@ -7,17 +7,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 // import ChatApp from './Chat App'
 // import WeatherApp from './Weather App'
 // import BudgetCalculator from './Budget Calculator App'
-import ECommerce from './E-Commerce Page'
-import { ProductProvider } from './E-Commerce Page/Context'
+// import ECommerce from './E-Commerce Page'
+// import { ProductProvider } from './E-Commerce Page/Context'
+import StepForm from './Step Form Page'
 
 function App() {
-  return (
-    <ProductProvider>
-      <Router>
-        <ECommerce />
-      </Router>
-    </ProductProvider>
-  )
+  return <StepForm />
 }
 
 export default App
