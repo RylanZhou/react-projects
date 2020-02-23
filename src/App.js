@@ -9,10 +9,12 @@ import { BrowserRouter as Router } from 'react-router-dom'
 // import BudgetCalculator from './Budget Calculator App'
 // import ECommerce from './E-Commerce Page'
 // import { ProductProvider } from './E-Commerce Page/Context'
-import StepForm from './Step Form Page'
+// import StepForm from './Step Form Page'
+// import BodyTemperature from './Body Temperature Page'
+import ExpenseTracker from './Expense Tracker Page'
 
 function App() {
-  return <StepForm />
+  return <ExpenseTracker />
 }
 
 export default App
