@@ -19,11 +19,10 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    'react/jsx-max-props-per-line': [
-      2, {'when': 'multiline'}
-    ],
+    'react/jsx-max-props-per-line': [2, { when: 'multiline' }],
     'react/jsx-pascal-case': ['error'],
     'react/jsx-closing-tag-location': 2,
+    'react/self-closing-comp': 'error',
     'accessor-pairs': 2,
     'arrow-spacing': [
       2,
@@ -265,7 +264,6 @@ module.exports = {
         objectsInObjects: false
       }
     ],
-    'array-bracket-spacing': [2, 'never'],
-
+    'array-bracket-spacing': [2, 'never']
   }
 }
