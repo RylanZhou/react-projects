@@ -12,10 +12,11 @@ import React from 'react'
 // import StepForm from './Step Form Page'
 // import BodyTemperature from './Body Temperature Page'
 // import ExpenseTracker from './Expense Tracker Page'
-import COVID19Tracker from './COVID-19 Tracker Page'
+// import COVID19Tracker from './COVID-19 Tracker Page'
+import Combinations from './Combinations Page'
 
 function App() {
-  return <COVID19Tracker />
+  return <Combinations />
 }
 
 export default App

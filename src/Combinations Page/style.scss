@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 0;
+  background-color: #efefef;
+
+  .card {
+    min-width: 550px;
+    margin: 30px 0;
+
+    .calc {
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+
+      .math {
+        font-size: 90px;
+        font-style: italic;
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .inputs {
+        margin: 0 8px;
+
+        .input {
+          display: block;
+          width: 100px;
+          margin: 8px 0;
+        }
+      }
+
+      .result {
+        display: inline-block;
+        margin-left: 10px;
+        color: #aaa;
+      }
+    }
+  }
+}
+
+.popover-container {
+  padding: 20px;
+
+  img {
+    vertical-align: middle;
+    // width: 300px;
+  }
+}
