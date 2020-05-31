@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-container {
+  min-height: 100vh;
+  background-color: #eee;
+
+  .navbar .toolbar {
+    display: flex;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: white;
+    }
+
+    .logo {
+      svg {
+        font-size: 40px;
+        color: white;
+      }
+
+      .logo-text {
+        color: white;
+        font-size: 30px;
+      }
+    }
+
+    .product {
+      flex-grow: 1;
+
+      a {
+        text-decoration: underline;
+        text-decoration-color: white;
+      }
+    }
+
+    .cart {
+      margin-right: 0;
+
+      svg {
+        font-size: 30px;
+        color: white;
+      }
+    }
+  }
+
+  .product-list {
+    .title {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+      .product {
+        margin: 24px;
+
+        &:hover {
+          .img-container {
+            img {
+              transform: scale(1.2);
+            }
+
+            .button {
+              transform: translate(0, 0);
+            }
+          }
+        }
+
+        .img-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          border: 1px solid #eee;
+          border-radius: 4px;
+          min-height: 244px;
+          overflow: hidden;
+          text-align: center;
+
+          img {
+            width: 80%;
+            transition: all 2s;
+          }
+
+          .button {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 6px 0 0 0;
+            transform: translate(100%, 100%);
+            transition: all 1s;
+
+            svg {
+              font-size: 24px;
+            }
+          }
+        }
+
+        .basic-info {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 12px;
+
+          .name {
+            font-weight: bold;
+          }
+
+          .price {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            background-color: #27ae60;
+          }
+        }
+
+        .action {
+          a {
+            display: block;
+            font-size: 14px;
+            text-decoration: none;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+
+  .product-detail {
+    .title {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    .row {
+      display: flex;
+      padding: 0 30px;
+
+      a {
+        text-decoration: none;
+      }
+
+      .left,
+      .right {
+        width: 50%;
+      }
+
+      .right {
+        padding: 20px 0;
+        align-self: center;
+        text-transform: capitalize;
+
+        h2 {
+          margin-bottom: 10px;
+        }
+
+        .price {
+          margin: 20px 0;
+          color: #27ae60;
+          font-size: 20px;
+        }
+
+        h5 {
+          font-size: 16px;
+        }
+
+        p {
+          margin-top: 10px;
+          font-size: 14px;
+          color: #666;
+        }
+
+        .button-group {
+          margin-top: 24px;
+
+          button {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .empty-cart {
+    text-align: center;
+
+    h1 {
+      margin: 24px 0;
+    }
+  }
+
+  .cart {
+    .title {
+      margin: 24px 0;
+      text-align: center;
+    }
+
+    th {
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    td {
+      font-size: 16px;
+
+      .img {
+        width: 100px;
+      }
+
+      &.name,
+      &.price {
+        font-weight: bold;
+      }
+
+      .delete-btn {
+        color: #e74c3c;
+        font-size: 20px;
+      }
+    }
+
+    .cart-balance {
+      margin: 20px 20px 0 0;
+      text-align: right;
+
+      .balance {
+        margin-top: 20px;
+        line-height: 24px;
+        color: #666;
+        font-weight: normal;
+
+        strong {
+          display: inline-block;
+          min-width: 60px;
+        }
+      }
+    }
+  }
+
+  .default {
+    h1 {
+      margin: 24px 0;
+      text-align: center;
+
+      span {
+        color: #e74c3c;
+      }
+    }
+  }
+}
+
+.item-dialog {
+  text-align: center;
+
+  .dialog-container {
+    h3 {
+      margin: 10px 0;
+
+      &:first-of-type {
+        font-size: 24px;
+      }
+    }
+
+    .btn {
+      margin: 10px 0;
+    }
+  }
+}

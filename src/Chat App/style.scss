@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.page-container {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  
+  header {
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 4fr 1fr;
+    grid-template-areas: 'c m'
+                         'c e';
+    grid-gap: 10px;
+    padding: 20px;
+
+    .channel-list {
+      grid-area: c;
+      border-right: 1px solid black;
+    }
+
+    .message-list {
+      grid-area: m;
+      height: 100%;
+      overflow-y: auto;
+      
+      .message {
+        margin: 0 0 10px 10px;
+
+        .user {
+          font-size: 14px;
+        }
+
+        .text {
+          display: inline-block;
+          padding: 8px;
+          border-radius: 12px;
+          color: white;
+          background-color: #3498db;
+        }
+      }
+    }
+
+    .editor {
+      grid-area: e;
+      padding: 10px 0;
+      border-top: 1px solid black;
+
+      .text {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

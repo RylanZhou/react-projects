@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif !important;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px 0;
+  background-color: #ccc;
+
+  .title {
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+  }
+
+  .card {
+    width: 70%;
+    min-width: 400px;
+    margin: 4px 0;
+    padding: 20px;
+    text-align: center;
+    overflow-y: auto;
+
+    .expense-form {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: baseline;
+    }
+
+    .expense-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .list {
+        width: 100%;
+        list-style: none;
+        
+        .expense-item {
+          display: flex;
+          align-items: center;
+          height: 48px;
+          margin: 10px 0;
+          padding: 0 10px;
+          border: 1px solid #ccc;
+          
+          .charge {
+            width: 50%;
+            min-width: 200px;
+            text-align: left;
+            text-transform: capitalize;
+            font-weight: bold;
+          }
+
+          .amount {
+            flex: 1;
+            text-align: left;
+          }
+        }
+      }
+    }
+
+    .total {
+      font-size: 24px;
+      
+      span {
+        color: #2196f3;
+      }
+    }
+  }
+}
