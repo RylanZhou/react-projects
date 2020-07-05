@@ -5,7 +5,7 @@ import React from 'react'
 // import BeachResort from './Beach Resort Page/index'
 // import { RoomProvider } from './Beach Resort Page/Context'
 // import ChatApp from './Chat App'
-import WeatherApp from './Weather App'
+// import WeatherApp from './Weather App'
 // import BudgetCalculator from './Budget Calculator App'
 // import ECommerce from './E-Commerce Page'
 // import { ProductProvider } from './E-Commerce Page/Context'
@@ -14,9 +14,10 @@ import WeatherApp from './Weather App'
 // import ExpenseTracker from './Expense Tracker Page'
 // import COVID19Tracker from './COVID-19 Tracker Page'
 // import Combinations from './Combinations Page'
+import BreakingBad from './Breaking Bad Page'
 
 function App() {
-  return <WeatherApp />
+  return <BreakingBad />
 }
 
 export default App
